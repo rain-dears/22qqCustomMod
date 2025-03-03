@@ -41,7 +41,7 @@ public class Main implements ModInitializer {
         KeyBinding nt = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Name Visibility",
                 GLFW.GLFW_KEY_9,
                 "22qq Mod"));
-        KeyBinding co = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Name Visibility",
+        KeyBinding co = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Crystal Oprimizer",
                 GLFW.GLFW_KEY_0,
                 "22qq Mod"));
 
@@ -57,12 +57,12 @@ public class Main implements ModInitializer {
                 client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rNoHurtCam is now §e" + nhcToggle), false);
             } else if (pingtoggle.wasPressed()) {
                 playerpingToggle = !playerpingToggle;
-                client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Ping to §e" + nhcToggle), false);
+                client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Ping to §e" + playerpingToggle), false);
             } else if (nt.wasPressed()) {
                 ntToggle = !ntToggle;
                 client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Name Visibility to §e" + ntToggle), false);
-            } else if (nt.wasPressed()) {
-                ntToggle = !ntToggle;
+            } else if (co.wasPressed()) {
+                coToggle = !coToggle;
                 client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Crystal Optimizer to §e" + coToggle), false);
             }
         });
