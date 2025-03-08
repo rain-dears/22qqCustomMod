@@ -17,7 +17,7 @@ public class Main implements ModInitializer {
     public static boolean playerpopsToggle = true;
     public static boolean playerpingToggle = true;
     public static boolean nhcToggle = true;
-    public static boolean ntToggle = true;
+    public static boolean nvToggle = true;
     public static boolean coToggle = true;
     public static MinecraftClient MC = MinecraftClient.getInstance();
 
@@ -38,7 +38,7 @@ public class Main implements ModInitializer {
         KeyBinding nhc = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle NoHurtCam",
                 GLFW.GLFW_KEY_8,
                 "22qq Mod"));
-        KeyBinding nt = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Name Visibility",
+        KeyBinding nv = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Name Visibility",
                 GLFW.GLFW_KEY_9,
                 "22qq Mod"));
         KeyBinding co = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Crystal Oprimizer",
@@ -58,9 +58,9 @@ public class Main implements ModInitializer {
             } else if (pingtoggle.wasPressed()) {
                 playerpingToggle = !playerpingToggle;
                 client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Ping to §e" + playerpingToggle), false);
-            } else if (nt.wasPressed()) {
-                ntToggle = !ntToggle;
-                client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Name Visibility to §e" + ntToggle), false);
+            } else if (nv.wasPressed()) {
+                nvToggle = !nvToggle;
+                client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Name Visibility to §e" + nvToggle), false);
             } else if (co.wasPressed()) {
                 coToggle = !coToggle;
                 client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Crystal Optimizer to §e" + coToggle), false);

@@ -10,7 +10,7 @@
     "EndCrystalEntityMixin",
     "GameRendererMixin",
     "InGameOverlayRendererMixin",
-    "MixinPlayerEntityRenderer",
+    "NameTagRenderer",
     "PlayerEntityRendererMixin"
   ],
   "injectors": {
