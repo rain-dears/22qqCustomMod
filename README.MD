@@ -5,6 +5,7 @@
 * NoFireOverlay
 * Crystal Optimizer
 * NameTag Visibility
+* Removes Crystal Bounce
 
 # Controls (you can change it)
 * F8 - Toggles popcounter
@@ -12,3 +13,4 @@
 * 8  - NoHurtCam
 * 9  - NameTag Visibility
 * 0  - Crystal Optimizer
+* 7  - No Crystal Bounce
