@@ -18,8 +18,6 @@ public class Main implements ModInitializer {
     public static boolean playerpingToggle = true;
     public static boolean nhcToggle = true;
     public static boolean nvToggle = true;
-    public static boolean coToggle = true;
-    public static boolean nbToggle = true;
     public static MinecraftClient MC = MinecraftClient.getInstance();
 
     private static final KeyBinding[] keyBindings = {
@@ -28,8 +26,6 @@ public class Main implements ModInitializer {
             createKeyBinding("Reset PopCounter", GLFW.GLFW_KEY_F8),
             createKeyBinding("Toggle NoHurtCam", GLFW.GLFW_KEY_8),
             createKeyBinding("Toggle Name Visibility", GLFW.GLFW_KEY_9),
-            createKeyBinding("Toggle Crystal Optimizer", GLFW.GLFW_KEY_0),
-            createKeyBinding("Toggle noBounce", GLFW.GLFW_KEY_7)
     };
 
     private static final String[] messages = {
@@ -38,8 +34,6 @@ public class Main implements ModInitializer {
             "PopCounter has been reset!",
             "NoHurtCam is now ",
             "Toggled Name Visibility to ",
-            "Toggled Crystal Optimizer to ",
-            "Toggled noBounce to "
     };
 
     private static final Runnable[] actions = {
@@ -48,8 +42,6 @@ public class Main implements ModInitializer {
             () -> playerPops.clear(),
             () -> nhcToggle = !nhcToggle,
             () -> nvToggle = !nvToggle,
-            () -> coToggle = !coToggle,
-            () -> nbToggle = !nbToggle
     };
 
     @Override
@@ -74,8 +66,6 @@ public class Main implements ModInitializer {
             case 1 -> playerpingToggle;
             case 3 -> nhcToggle;
             case 4 -> nvToggle;
-            case 5 -> coToggle;
-            case 6 -> nbToggle;
             default -> false;
         };
     }
