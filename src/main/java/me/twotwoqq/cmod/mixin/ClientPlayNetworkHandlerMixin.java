@@ -1,6 +1,7 @@
 package me.twotwoqq.cmod.mixin;
 
 import me.twotwoqq.cmod.Main;
+import me.twotwoqq.cmod.config.ConfigManager;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.network.OtherClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
@@ -20,7 +21,7 @@ public class ClientPlayNetworkHandlerMixin {
     @Inject(method = "onEntityStatus", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/particle/ParticleManager;addEmitter(Lnet/minecraft/entity/Entity;Lnet/minecraft/particle/ParticleEffect;I)V"))
     public void updateCounter(EntityStatusS2CPacket packet, CallbackInfo ci) {
         Entity entity = packet.getEntity(world);
-        if (entity instanceof OtherClientPlayerEntity player && Main.playerpopsToggle) {
+        if (entity instanceof OtherClientPlayerEntity player && ConfigManager.popCounterEnabled) {
             Main.playerPops.putIfAbsent(player.getUuid(), 0);
             Main.playerPops.compute(player.getUuid(), ((uuid, integer) -> integer + 1));
         }
